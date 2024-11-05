@@ -1,0 +1,73 @@
+.card{
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    font-family: var(--font);
+    overflow: hidden;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cardAnime{
+    display:block;
+    width: 300px;
+    height: 420px;
+    background-color: rgba(14, 1, 1, 0.295);
+    margin:  2em;
+    justify-content: center;
+    justify-items: center;
+    transition: transform 0.3s ease;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.cardAnime:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.carroselLista{
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+}
+
+.carroselLista li{
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+}
+.imagemCard{
+    width: 200px;
+    height: 300px;
+    margin: 2em 2em 1em 2em;
+    padding: 0;
+    display: block;
+    border: 1px solid rgba(182, 21, 21, 0.26);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.boxTituloCard{
+    display: block;
+    background: linear-gradient(to right, #3D0000, #600000, #7A1C1C); height: 25px; font-family: var(--font);text-align: center; font-weight: 700; padding: 1em; color:white;
+    width: 97.4vw;
+}
+
+.tituloCard{
+    font-size: 26px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tituloAnime{
+    padding: 0;
+    display: block;
+}
+
+.cardAnime p{
+
+    font-weight: 170;
+    font-size: 14px;
+    margin-top: 5px;
+
+}

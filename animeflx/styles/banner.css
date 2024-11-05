@@ -1,0 +1,57 @@
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   background: linear-gradient(to right,  rgb(80, 3, 3),  rgb(100, 10, 6) 30%, rgba(0, 0, 0, 0) 70%), 
+              url('../img/A_detailed_anime_banner_in_the_style_of_action-pac.png') no-repeat;
+    width: 100%;
+    height: 209px;
+    background-size: cover;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    background-position: fixed;
+}
+
+
+.src{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 500px; margin: 0px;
+    padding: 0;
+    text-align: center;
+}
+
+.boxTituloBanner{
+    font-weight: 400;
+    font-family: var(--font);
+    color:var(--white);
+
+}
+
+.tituloBanner{
+    font-size: 30px;
+    margin: 0em 0 1em 0;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+
+}
+.inputPesquisa{
+    border: none;
+    text-align: left; width: 500px; height: 40px;border-radius: 20px;
+    border: 1px solid var(--white);
+    background-color:  rgba(51, 1, 1, 0.623);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+    padding-left: 2em;
+}
+
+.inputPesquisa::placeholder{
+    color: rgba(228, 226, 226, 0.719);
+}
+
+.inputPesquisa:focus{
+    color: var(--white);
+    border: 1px solid var(--white);
+    width: 502px;
+    height: 44px;
+    background-color: rgba(49, 8, 8, 0.253);
+}
