@@ -1,19 +1,19 @@
-# Projeto A2 - Web Desenvolvimento
+# Plataforma de Streaming de Anime
 
 **Universidade Positivo**
 
 ## Descrição
-Site construído em HTML, CSS e JavaScript para a Avaliação A2 da matéria **Web Desenvolvimento**.
+Este projeto é uma plataforma de streaming de anime, construída em HTML, CSS e JavaScript para a Avaliação A2 da disciplina **Web Desenvolvimento**.
 
 ## Estrutura do Projeto
-- **HTML**: Responsável pela estruturação e organização do conteúdo.
-- **CSS**: Utilizado para estilizar e dar layout ao site.
-- **JavaScript**: Usado para adicionar interatividade e funcionalidades dinâmicas.
+- **HTML**: Define a estrutura semântica da plataforma.
+- **CSS**: Aplica o design e cria uma interface amigável e atrativa.
+- **JavaScript**: Adiciona funcionalidades dinâmicas e interatividade ao site.
 
 ## Funcionalidades
-- Estrutura semântica de HTML
-- Design responsivo com CSS
-- Interações dinâmicas implementadas com JavaScript
+- Estrutura organizada para navegação intuitiva
+- Design responsivo e estilizado com CSS
+- Interatividade e funcionalidades dinâmicas para melhor experiência do usuário
 
 ## Como Utilizar
 1. Clone este repositório.
