@@ -9,3 +9,23 @@ function abrirModal(){
         }
     })
 }
+
+window.addEventListener("scroll", function() {
+    const elemento = document.querySelector(".boxCardAssista");
+    const alturaPagina = window.innerHeight;
+    const posicaoElemento = elemento.getBoundingClientRect().top;
+  
+    if (posicaoElemento < alturaPagina) {
+      elemento.style.opacity = 1;
+    }else {
+        elemento.style.opacity = 0; }
+  });
+
+  document.querySelector(".btnGenero").addEventListener("click", function() {
+    const dropdown = document.querySelector(".menuGenero");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  });
+
+  function voltarPaginaInicial() {
+    window.location.href = 'index.html';
+  }

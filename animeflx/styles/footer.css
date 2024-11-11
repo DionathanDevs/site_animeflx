@@ -1,0 +1,39 @@
+footer{
+    background-color: var(--red);
+    height: 300px;
+    color: rgb(216, 169, 169);
+    font-family: var(--font);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgIcon{
+    display: flex;
+    width: 50px;
+}
+
+.footerIcons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerTitulo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 2em;
+    font-family: var(--font);
+}
+
+.footerIcons ul{
+    margin-top: 5em;
+    display: flex;
+    padding: 1em;
+}
+
+.footerIcons ul li{
+    padding: 1em;
+}
