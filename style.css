@@ -1,0 +1,24 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/entrar.css");
+@import url("styles/carrossel.css");
+@import url("styles/card.css");
+@import url("styles/sobre.css");
+@import url("styles/footer.css");
+@import url("styles/noticias.css");
+:root{
+    --red: rgb(104, 11, 11);
+    --white: #ffffff;
+    --black: #0a0908e8;
+    --font: 'Poppins';
+    --font2: 'Josefin Sans';
+}
+
+body{
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 400;
+   /* background-color: white;*/
+   background-color: rgb(36, 1, 1); 
+   /* background-color: rgb(59, 1, 1); */
+}

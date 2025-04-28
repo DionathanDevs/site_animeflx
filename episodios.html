@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NimeFlix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .janelaModal.abrir{
+            display: flex;
+        }
+
+        .loginContainer{
+            margin: 0 auto;
+            padding: 0;
+            width: 900px;
+            height: 70vh;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9) 60%, rgba(0, 0, 0, 0.6) 100%), 
+              url('./img/roxo.png') no-repeat center center/cover;
+              font-family: var(--font);
+            border: 1px solid var(rgb(110, 2, 2));
+            box-shadow: 5 3 4 1 black;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+}
+            
+        
+    
+        
+        .boxLogin{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 420px;
+            height: 340px;
+            align-items: center;
+            
+            
+        }
+
+        .formLogin{
+            display: block;
+            width: 400px;
+            height: 280px;
+            justify-content: center;
+            align-items: center;
+            padding: 1px;
+            color: var(--white);
+            
+            
+        }
+
+        .boxLogo{
+            display: block;
+            margin: auto;
+            width: 105px;
+        }
+
+        .inputLogin, .cadastroLogin, .esquecimentoLogin{
+            margin: 0.8em 0;
+            
+            display: block;
+        }
+        
+
+
+        .inputLogin{
+            width: 100%;
+            border: 1px solid rgb(51, 51, 51);
+            box-shadow: 1 1 1 1;
+            height: 40px;
+            margin: 1.5em 0;
+            border-radius: 5px;
+            font-family: var(--font);
+            background-color: transparent;
+            
+    
+        }
+
+        .botaoLogin{
+            display: flex;
+            justify-content: center;
+        }
+
+        .inputBotao{
+            width: 100%;
+            height: 50px;
+            margin: 1.5em auto 0 auto;
+            font-family: var(--font);
+            border-radius: 20px;
+            background-color: var(--red);
+            color: var(--white);
+            border: 1px solid rgba(121, 12, 12, 0.425);
+            box-shadow: 1 3 3 3;
+            font-size: 17px;
+        }
+
+        .inputBotao:hover{
+            cursor: pointer;
+            background-color: rgb(119, 4, 4);
+            transition: 0.2s;
+            height: 51px;
+        }
+
+        .inputLogin:focus{
+            color: white;
+            border: 0 none;
+            box-shadow: 0 0 0 0;
+            outline: 0;
+            border: 1px solid var(--white);
+            padding-left: 1em;
+            font-family: var(--font);
+            background-color: rgba(250, 249, 247, 0);
+
+        }
+
+        .inputLogin::placeholder{
+            padding-left: 5px;
+            color: rgb(174, 192, 191);
+        }
+
+        .linkCadastro{
+            padding-left: 5px;
+            text-decoration: none;
+            color: rgb(114, 15, 15);
+            font-family: var(--font);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        
+        .linkSenha{
+            text-decoration: none;
+            color: rgb(114, 15, 15);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .linkCadastro:hover, .linkSenha:hover{
+            color: rgb(146, 14, 14);
+            transition: 0.2s;
+        }
+        .boxMain{
+            width: 500px;
+            height: 500px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            margin: 10em 0;
+            background-color: rgba(27, 27, 27, 0.61);
+            border-radius: 20px;
+            box-shadow: 1 1 1 1;
+            border: 1px solid rgba(39, 39, 39, 0.61);
+            padding: 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+
+        }
+        .janelaModal{
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.445);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+        }
+        h2{
+            font-size: 14px;
+            margin-bottom: 5em;
+        }
+
+        .fechar{
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            margin: 0.5em;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgb(104, 11, 11);
+            color: var(--white);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+
+        
+        .fechar:hover{
+            background-color: rgb(146, 14, 14);
+            transition: 0.5s;
+            
+        }
+    </style>
+</head>
+<body>
+    <main id="container">
+        <header>
+            <div class="boxHeader">
+            <div class="boxTitulo">
+                <h1 class="titulo">Nime<span class="tituloSpan">Flx</span><img src="./img/2XstzZS3MWzfRfTbX2UQZ2KNQzX-desktop.jpg" alt=""></h1>
+            </div>
+       
+        <nav>
+        <div class="boxMenu">
+            <ul class="menu">
+                <li class="menuLista"><a href="index.html" class="menuLink">Início</a></li>
+                <li class="menuLista"><button class="btnGenero">Gêneros</button></li>
+                <ul class="menuGenero" >
+                    <li class="menuListaGenero"><a href="#" class="menuLinkGenero">Ação</a></li>
+                    <li class="menuListaGenero"><a href="#"class="menuLinkGenero">Romance</a></li>
+                    <li class="menuListaGenero"> <a href="#"class="menuLinkGenero">Suspense</a></li>
+                    <li class="menuListaGenero"> <a href="#"class="menuLinkGenero">Terror</a></li>
+                    <li class="menuListaGenero"> <a href="#"class="menuLinkGenero">Aventura</a></li>
+                </ul>
+                <li class="menuLista"><a href="episodios.html"class="menuLink">Episodios</a></li>
+                <li class="menuLista"><a href="noticias.html"class="menuLink">Noticias</a></li>
+                <li class="menuLista"><a href="meusfavoritos.html"class="menuLink">Meus Favoritos</a></li>
+                <li class="menuLista"><div onclick="abrirModal()" class="btn" ><p>Entrar</p></div></li>       
+                </ul>
+        </div>  
+        </nav>
+        </div> 
+        </header>
+        
+        <section class="janelaModal" id="janelaModal">
+        <div class="loginContainer">
+           <button class="fechar" id="fechar">X</button> 
+           <div class="boxMain">
+            
+            <div class="boxLogo"><img src="./img/logon.png" alt="Logo Nime Flx" class="logoLogin" style="width: 100px;"></div>
+                <div class="boxLogin">
+                <div class="formLogin">
+                    <form action="#" class="formLogin">
+                        <label for="email" id="email" class="labelLogin">Email</label>
+                        <input type="email" id="email" placeholder="Insira seu e-mail" class="inputLogin">
+                        <label for="password"class="labelLogin">Senha</label >
+                        <input type="password" id="password" class="inputLogin" placeholder="Insira sua senha">
+                        <div class="botaoLogin">
+                        <input type="submit" value="Entrar" class="inputBotao">
+                        </div>
+                    </form>
+                    <h2 class="cadastroLogin">Não possui uma conta?<a href="#" class="linkCadastro">Cadastrar-se</a></h2>
+                    <h2 class="esquecimentoLogin"><a href="#" class="linkSenha">Esqueci minha senha</a></h2>
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
+        
+    <section class="banner">
+        <div class="src">
+            <div class="boxTituloBanner">
+            <h2 class="tituloBanner">Ja sabe o que assistir?</h2></div>
+            <input type="search" name="search" id="searchAnime" class="inputPesquisa" placeholder="Pesquise aqui"></div>
+        
+    </section>
+    <section class="card">
+        <div class="boxTituloCard">
+        <h2 class="tituloCard">NOVOS EPISODIOS!</h2>
+        </div>
+        <ul class="carroselLista Episodio">
+            <li><div class="cardAnime Episodio">
+               <img src="./img/back.jpg" alt="anime" class="imagemCard Episodio">
+                   <h3 class="tituloAnime">Anime - Episodio 14</h3>
+                   <p>Legendado</p>
+           </li>
+               
+           </div>
+               <li><div class="cardAnime Episodio">
+                  <img src="./img/banner.webp" alt="anime" class="imagemCard Episodio">
+                      <h3 class="tituloAnime">Demon Slayer - Episodio 14</h3>
+                      <p>Legendado</p>
+              </li>
+                  
+              </div>
+               <li><div class="cardAnime Episodio">
+                  <img src="./img//solo.png" alt="anime" class="imagemCard Episodio">
+                      <h3 class="tituloAnime">Solo Leveling - Episodio 14</h3>
+                      <p>Legendado</p>
+              </li>
+                  
+              </div>
+               <li><div class="cardAnime Episodio">
+                  <img src="./img/roxo.jpg" alt="anime" class="imagemCard Episodio">
+                      <h3 class="tituloAnime">Akame Kill - Episodio 14</h3>
+                      <p>Legendado</p>
+              </li>
+                  
+              </div>
+              
+           </div>
+       </ul>
+        
+    </section>
+
+    <section class="card">
+        <div class="boxTituloCard">
+        <h2 class="tituloCard">LANÇADOS ESSA SEMANA</h2>
+        </div>
+        <ul class="carroselLista Episodio">
+            <li><div class="cardAnime Episodio">
+               <img src="./img/back.jpg" alt="anime" class="imagemCard Episodio">
+                   <h3 class="tituloAnime">Anime - Episodio 14</h3>
+                   <p>Legendado</p>
+           </li>
+               
+           </div>
+               <li><div class="cardAnime Episodio">
+                  <img src="./img/banner.webp" alt="anime" class="imagemCard Episodio">
+                      <h3 class="tituloAnime">Demon Slayer - Episodio 14</h3>
+                      <p>Legendado</p>
+              </li>
+                  
+              </div>
+               <li><div class="cardAnime Episodio">
+                  <img src="./img//solo.png" alt="anime" class="imagemCard Episodio">
+                      <h3 class="tituloAnime">Solo Leveling - Episodio 14</h3>
+                      <p>Legendado</p>
+              </li>
+                  
+              </div>
+               <li><div class="cardAnime Episodio">
+                  <img src="./img/roxo.jpg" alt="anime" class="imagemCard Episodio">
+                      <h3 class="tituloAnime">Akame Kill - Episodio 14</h3>
+                      <p>Legendado</p>
+              </li>
+                  
+              </div>
+              
+           </div>
+       </ul>
+       <ul class="carroselLista Episodio">
+        <li><div class="cardAnime Episodio">
+           <img src="./img/back.jpg" alt="anime" class="imagemCard Episodio">
+               <h3 class="tituloAnime">Anime - Episodio 14</h3>
+               <p>Legendado</p>
+       </li>
+           
+       </div>
+           <li><div class="cardAnime Episodio">
+              <img src="./img/banner.webp" alt="anime" class="imagemCard Episodio">
+                  <h3 class="tituloAnime">Demon Slayer - Episodio 14</h3>
+                  <p>Legendado</p>
+          </li>
+              
+          </div>
+           <li><div class="cardAnime Episodio">
+              <img src="./img//solo.png" alt="anime" class="imagemCard Episodio">
+                  <h3 class="tituloAnime">Solo Leveling - Episodio 14</h3>
+                  <p>Legendado</p>
+          </li>
+              
+          </div>
+           <li><div class="cardAnime Episodio">
+              <img src="./img/roxo.jpg" alt="anime" class="imagemCard Episodio">
+                  <h3 class="tituloAnime">Akame Kill - Episodio 14</h3>
+                  <p>Legendado</p>
+          </li>
+              
+          </div>
+          
+       </div>
+   </ul>
+
+   <ul class="carroselLista Episodio">
+    <li><div class="cardAnime Episodio">
+       <img src="./img/back.jpg" alt="anime" class="imagemCard Episodio">
+           <h3 class="tituloAnime">Anime - Episodio 14</h3>
+           <p>Legendado</p>
+   </li>
+       
+   </div>
+       <li><div class="cardAnime Episodio">
+          <img src="./img/banner.webp" alt="anime" class="imagemCard Episodio">
+              <h3 class="tituloAnime">Demon Slayer - Episodio 14</h3>
+              <p>Legendado</p>
+      </li>
+          
+      </div>
+       <li><div class="cardAnime Episodio">
+          <img src="./img//solo.png" alt="anime" class="imagemCard Episodio">
+              <h3 class="tituloAnime">Solo Leveling - Episodio 14</h3>
+              <p>Legendado</p>
+      </li>
+          
+      </div>
+       <li><div class="cardAnime Episodio">
+          <img src="./img/roxo.jpg" alt="anime" class="imagemCard Episodio">
+              <h3 class="tituloAnime">Akame Kill - Episodio 14</h3>
+              <p>Legendado</p>
+      </li>
+          
+      </div>
+      
+   </div>
+</ul>
+    </section>
+
+    <article style="align-items: center; text-align: center;">
+        <button onclick="voltarPaginaInicial()" class="btnVoltar" style="background-color: #600000;border: none; width: 200px; height: 50px; margin: 5em;color: white; border-radius: 50px; cursor: pointer; font-family: var(--font); font-size: 20px;">Voltar</button>
+    </article>
+    
+    <footer>
+            <div class="footerIcons">
+                <ul>
+                    <li><a href="www.linkedin.com/in/dionathan-boing-mesquita-210488236"target="_blank"><img src="img/linkedin.png" alt="Icone Linkedin" class="imgIcon"></a></li>
+                    <li><a href="https://www.instagram.com/k1shoy/" target="_blank"><img src="img/instagram.png" alt="Icone Instagram"class="imgIcon"></a></li>
+                    <li><a href="https://github.com/DionathanDevs" target="_blank"><img src="img/github.png" alt="Icone GitHub"class="imgIcon"></a></li>
+                </ul>
+            </div>
+        <h4 class="footerTitulo">Desenvolvido por Dionathan Boing</h4>
+    </footer>
+    <script src="script.js"></script>
+</main>
+</body>
+</html>

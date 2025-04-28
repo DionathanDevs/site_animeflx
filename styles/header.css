@@ -1,0 +1,125 @@
+.boxHeader{
+    display: flex;
+
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #3D0000, #600000, #7A1C1C);
+    font-family: var(--font);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.btnGenero{
+    border: none;
+    background-color: transparent;
+    font-family: 'Poppins';
+    color: var(--white);
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.menuLinkGenero{
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins';
+    margin-top: 6em;
+}
+.menuGenero li{
+    margin-top: 1em;
+}
+.menuGenero{
+    color: white;
+    font-family: 'Poppins';
+    display: none; 
+  position: absolute;
+  background-color: #600000;
+  width: 100px;
+  height: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 15em;
+  margin-left: 5em;
+  padding: 0.2em;
+}
+
+.src:focus{
+    border-style: none;
+    border: none;
+}
+
+.boxTitulo{
+    display: inline-flex;
+    margin: 0 1em;
+    width: 200px;
+}
+
+.titulo{
+    color: var(--white);
+    font-size: 3em;
+    display: inline-flex;
+}
+
+.tituloSpan{
+    color: var(--white);
+    display: flex;
+    display: inline-flex;
+}
+
+.boxMenu{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    padding-right: 6em;
+}
+
+.menu{
+    display: inline-flex;
+    width: 500px;
+    height: 50px;
+    align-items: center;
+    
+}
+
+.menuLista{
+    padding: 0 1em;
+    text-decoration: none;
+    list-style: none;
+    width: 300px;
+    
+    
+}
+
+.menuLink{
+    text-decoration: none;
+    color: var(--white);
+
+}
+
+.perfil{
+    margin-right: 2em;
+}
+
+.btn{
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0.5em 0.5em 0 0.5em;
+    color: var(--red);
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid  var(--white);
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--white);
+    transition: 0.4s;
+    border: 1px solid  var(--white);
+}
